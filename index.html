@@ -753,12 +753,12 @@
 
   <script>
     const PHOTO_CONFIG = [
-      { id: 1, src: 'images/photo1.jpg', title: '【序幕 • 启程的瞬间】', desc: '微光穿透紫雾的晨曦，我们在迷宫的最初节点相逢，旅途由此铺展。' },
-      { id: 2, src: 'images/photo2.jpg', title: '【转角 • 偶遇的星光】', desc: '在迷茫的十字路口，无论选择哪一条回廊，总有一抹光亮在前方静候。' },
-      { id: 3, src: 'images/photo3.jpg', title: '【微光 • 幽谷的回声】', desc: '听风拂过紫水晶的清响，那是时光沉淀下的柔美音符。' },
-      { id: 4, src: 'images/photo4.jpg', title: '【绽放 • 繁花与旧忆】', desc: '那些在时光角落悄然盛放的瞬间，比星河更加璀璨夺目。' },
-      { id: 5, src: 'images/photo5.jpg', title: '【共鸣 • 星河长明】', desc: '穿越重重石壁与迷雾阻隔，只为了共同见证这一方星穹的永恒。' },
-      { id: 6, src: 'images/photo6.jpg', title: '【终章 • 奇迹与新生】', desc: '终点从不是旅途的结束，而是另一场灿烂冒险的序曲。' }
+      { id: 1, src: 'photo1.jpg', title: '【序幕 • 启程的瞬间】', desc: '微光穿透紫雾的晨曦，我们在迷宫的最初节点相逢，旅途由此铺展。' },
+      { id: 2, src: 'photo2.jpg', title: '【转角 • 偶遇的星光】', desc: '在迷茫的十字路口，无论选择哪一条回廊，总有一抹光亮在前方静候。' },
+      { id: 3, src: 'photo3.jpg', title: '【微光 • 幽谷的回声】', desc: '听风拂过紫水晶的清响，那是时光沉淀下的柔美音符。' },
+      { id: 4, src: 'photo4.jpg', title: '【绽放 • 繁花与旧忆】', desc: '那些在时光角落悄然盛放的瞬间，比星河更加璀璨夺目。' },
+      { id: 5, src: 'photo5.jpg', title: '【共鸣 • 星河长明】', desc: '穿越重重石壁与迷雾阻隔，只为了共同见证这一方星穹的永恒。' },
+      { id: 6, src: 'photo6.jpg', title: '【终章 • 奇迹与新生】', desc: '终点从不是旅途的结束，而是另一场灿烂冒险的序曲。' }
     ];
 
     function generateProceduralPhoto(index, title) {
@@ -1267,14 +1267,14 @@
         this.velocity = new THREE.Vector3();
         this.direction = new THREE.Vector3();
         this.playerRadius = 0.38;
-        this.walkSpeed = 1.7;         // Энгийн алхах хурдыг удаашруулсан
-        this.sprintSpeed = 3.0;       // Shift дарж гүйх хурдыг удаашруулсан
+        this.walkSpeed = 1.5;         // Энгийн алхах хурдыг удаашруулсан
+        this.sprintSpeed = 2.5;       // Shift дарж гүйх хурдыг удаашруулсан
         this.bobbingTimer = 0;
         this.defaultEyeHeight = 1.35;
 
         this.pitch = 0;
         this.yaw = 0;
-        this.sensitivity = 0.001;    // Хулганаар эргэж харах хурдыг багасгасан
+        this.sensitivity = 0.0009;    // Хулганаар эргэж харах хурдыг багасгасан
         this.initListeners();
       }
 
