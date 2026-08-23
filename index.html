@@ -853,7 +853,7 @@
         gateId: 2,
         title: '✨ 结界二：幽兰之门 (Gate 2)',
         question: '我们初次相遇的纪念日是哪一天？（例如：2025.10.06 或 2025年10月6日）',
-        placeholder: '例如 2025.10.06 或 2025年10月6日...',
+        placeholder: '例如 2025.11.08 或 2025年11月8日...',
         validAnswers: [
           "2025年10月6日", "2025年10月6号", "2025年10月06日", "2025年10月06号",
           "10月6日", "10月6号", "10月06日", "10月06号",
@@ -1201,12 +1201,14 @@
         this.grid[14][gate2X] = 0;
         this.grid[15][gate2X] = 0;
 
-        carveSection(15, 19, 1, this.cols - 2, [gate2X, 15]);
+        // 3-р хэсгийг ухахдаа 19 биш 17-р мөр хүртэл ухаж, төгсгөлийн бүсийг битүү ханаар хамгаалах
+        carveSection(15, 17, 1, this.cols - 2, [gate2X, 15]);
 
         const gate3X = this.cols - 2;
         const gate3Y = this.rows - 2;
-        this.grid[this.rows - 3][gate3X] = 0;
-        this.grid[gate3Y][gate3X] = 0;
+        this.grid[17][gate3X] = 0;            // Хаалга руу орох ганцхан зам
+        this.grid[this.rows - 3][gate3X] = 0; // Gate 3 байрлах цэг
+        this.grid[gate3Y][gate3X] = 0;        // Төгсгөлийн романтик дэлгэц гарах цэг
 
         this.gates = [
           { id: 1, x: gate1X, y: 6, unlocked: false, name: 'Gate 1 (紫晶之门)' },
@@ -1265,14 +1267,14 @@
         this.velocity = new THREE.Vector3();
         this.direction = new THREE.Vector3();
         this.playerRadius = 0.38;
-        this.walkSpeed = 2.5;         // Энгийн алхах хурдыг удаашруулсан
-        this.sprintSpeed = 4.2;       // Shift дарж гүйх хурдыг удаашруулсан
+        this.walkSpeed = 1.7;         // Энгийн алхах хурдыг удаашруулсан
+        this.sprintSpeed = 3.0;       // Shift дарж гүйх хурдыг удаашруулсан
         this.bobbingTimer = 0;
         this.defaultEyeHeight = 1.35;
 
         this.pitch = 0;
         this.yaw = 0;
-        this.sensitivity = 0.0014;    // Хулганаар эргэж харах хурдыг багасгасан
+        this.sensitivity = 0.001;    // Хулганаар эргэж харах хурдыг багасгасан
         this.initListeners();
       }
 
