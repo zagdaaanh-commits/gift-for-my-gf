@@ -1265,15 +1265,14 @@
         this.velocity = new THREE.Vector3();
         this.direction = new THREE.Vector3();
         this.playerRadius = 0.38;
-        this.walkSpeed = 4.4;
-        this.sprintSpeed = 7.2;
+        this.walkSpeed = 2.5;         // Энгийн алхах хурдыг удаашруулсан
+        this.sprintSpeed = 4.2;       // Shift дарж гүйх хурдыг удаашруулсан
         this.bobbingTimer = 0;
         this.defaultEyeHeight = 1.35;
 
         this.pitch = 0;
         this.yaw = 0;
-        this.sensitivity = 0.0022;
-
+        this.sensitivity = 0.0014;    // Хулганаар эргэж харах хурдыг багасгасан
         this.initListeners();
       }
 
